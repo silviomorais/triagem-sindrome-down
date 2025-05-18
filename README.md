@@ -8,7 +8,7 @@ Sistema de Triagem para Síndrome de Down
 Versão: 1.0
 Data: 17 de maio de 2025
 Autor: Silvio Morais
-Status do documento: Proposta inicial Criando o primeiro chatbot com IA gerarativa - mersão IA 3ª Edição
+Status do documento: Proposta inicial Criando o primeiro chatbot com IA gerarativa - Imersão IA 3ª Edição - Alura
 
 1. Visão Geral do Produto
    
