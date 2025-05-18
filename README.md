@@ -3,14 +3,18 @@
 ## 📋 Documento de Requisitos do Produto (PRD)
 
 Documento de Requisitos do Produto (PRD)
+
 Sistema de Triagem para Síndrome de Down
 Versão: 1.0
 Data: 17 de maio de 2025
-Autor: [A ser preenchido]
-Status do documento: Proposta inicial
+Autor: Silvio Morais
+Status do documento: Proposta inicial Criando o primeiro chatbot com IA gerarativa - mersão IA 3ª Edição
+
 1. Visão Geral do Produto
+   
 1.1 Descrição do Produto
 O Sistema de Triagem para Síndrome de Down é uma aplicação baseada em aprendizado de máquina desenvolvida para auxiliar profissionais de saúde na identificação precoce e triagem de pacientes com potencial diagnóstico de Síndrome de Down. O sistema utiliza algoritmos de inteligência artificial para analisar dados clínicos, biomarcadores e características fenotípicas, fornecendo uma avaliação probabilística que apoia o processo de diagnóstico.
+
 1.2 Problema a ser Resolvido
 
 A Síndrome de Down afeta aproximadamente 1 em cada 700 nascimentos e seu diagnóstico precoce é fundamental para intervenções terapêuticas eficazes
@@ -296,12 +300,6 @@ Protótipos iniciais de interface
 Modelo de dados
 Resultados preliminares de validação do algoritmo
 Especificações detalhadas de API
-
-11. Contato
-
-Para questões ou sugestões, entre em contato através de [seu-email@exemplo.com].
-
----
 
 **Lembrete**: Este projeto é uma ferramenta de triagem e não substitui diagnóstico médico profissional.
 
