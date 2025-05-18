@@ -2,296 +2,302 @@
 
 ## 📋 Documento de Requisitos do Produto (PRD)
 
-### 1.  Introdução
+Documento de Requisitos do Produto (PRD)
+Sistema de Triagem para Síndrome de Down
+Versão: 1.0
+Data: 17 de maio de 2025
+Autor: [A ser preenchido]
+Status do documento: Proposta inicial
+1. Visão Geral do Produto
+1.1 Descrição do Produto
+O Sistema de Triagem para Síndrome de Down é uma aplicação baseada em aprendizado de máquina desenvolvida para auxiliar profissionais de saúde na identificação precoce e triagem de pacientes com potencial diagnóstico de Síndrome de Down. O sistema utiliza algoritmos de inteligência artificial para analisar dados clínicos, biomarcadores e características fenotípicas, fornecendo uma avaliação probabilística que apoia o processo de diagnóstico.
+1.2 Problema a ser Resolvido
+
+A Síndrome de Down afeta aproximadamente 1 em cada 700 nascimentos e seu diagnóstico precoce é fundamental para intervenções terapêuticas eficazes
+Atualmente, o diagnóstico definitivo requer exames genéticos específicos (cariótipo), que podem ser demorados e nem sempre disponíveis em todos os contextos clínicos
+Há necessidade de um sistema de triagem eficiente que priorize casos para investigação genética mais detalhada
+A variabilidade fenotípica e a subjetividade na avaliação clínica podem dificultar o diagnóstico precoce em alguns casos
+
+1.3 Objetivos do Produto
+
+Fornecer uma ferramenta de triagem com alta sensibilidade (>95%) para identificação de potenciais casos de Síndrome de Down
+Reduzir o tempo entre a suspeita inicial e o diagnóstico definitivo
+Otimizar o uso de recursos de saúde, priorizando casos com maior probabilidade para exames confirmatórios
+Padronizar critérios de avaliação, reduzindo a variabilidade entre diferentes profissionais e centros de saúde
+Apoiar a decisão clínica com evidências baseadas em dados
+
+1.4 Público-alvo
+
+Médicos pediatras e neonatologistas
+Geneticistas clínicos
+Enfermeiros especializados em cuidados neonatais
+Profissionais de saúde em serviços de atenção primária
+Equipes multidisciplinares de avaliação do desenvolvimento infantil
+
+2. Requisitos Funcionais
+2.1 Entrada de Dados
+
+RF001: O sistema deve permitir o registro de dados demográficos do paciente (idade, sexo, histórico familiar)
+RF002: O sistema deve capturar características físicas e fenotípicas relevantes para a triagem
+RF003: O sistema deve permitir o upload de imagens faciais do paciente para análise morfológica
+RF004: O sistema deve registrar resultados de exames laboratoriais e biomarcadores quando disponíveis
+RF005: O sistema deve permitir a inserção de medidas antropométricas (peso, altura, perímetro cefálico)
+RF006: O sistema deve coletar informações sobre o desenvolvimento neuropsicomotor do paciente
+
+2.2 Processamento e Análise
+
+RF007: O sistema deve aplicar algoritmos de machine learning para analisar os dados inseridos
+RF008: O sistema deve processar imagens faciais para identificar características morfológicas associadas à Síndrome de Down
+RF009: O sistema deve integrar diferentes fontes de dados (clínicos, laboratoriais, imagéticos) em seu modelo preditivo
+RF010: O sistema deve calcular um escore de probabilidade para Síndrome de Down, baseado nos dados fornecidos
+RF011: O sistema deve comparar os dados do paciente com padrões de referência adequados para idade e sexo
+
+2.3 Saída e Relatórios
+
+RF012: O sistema deve gerar um relatório detalhado com o resultado da triagem e o escore de probabilidade
+RF013: O sistema deve fornecer recomendações para próximos passos, baseadas no resultado da triagem
+RF014: O sistema deve apresentar os principais fatores que contribuíram para o resultado da triagem
+RF015: O sistema deve permitir a exportação de relatórios em formatos PDF e CSV
+RF016: O sistema deve gerar gráficos e visualizações que facilitem a interpretação dos resultados
+
+2.4 Gestão de Dados
+
+RF017: O sistema deve manter um histórico de avaliações de cada paciente
+RF018: O sistema deve permitir a comparação entre avaliações diferentes do mesmo paciente
+RF019: O sistema deve possibilitar a atualização de dados e reavaliação da triagem
+RF020: O sistema deve incluir ferramentas para importação e exportação de dados
+RF021: O sistema deve permitir a busca e filtragem de pacientes por diferentes critérios
+
+3. Requisitos Não Funcionais
+3.1 Usabilidade
+
+RNF001: A interface deve ser intuitiva e adequada para uso em ambiente clínico
+RNF002: O sistema deve ser utilizável após treinamento mínimo (máximo 1 hora)
+RNF003: O sistema deve fornecer ajuda contextual e tutoriais incorporados
+RNF004: O tempo para completar uma triagem completa não deve exceder 10 minutos
+RNF005: A interface deve ser adaptável para diferentes dispositivos (desktop, tablet)
+
+3.2 Desempenho
+
+RNF006: O sistema deve processar e apresentar resultados em menos de 30 segundos
+RNF007: O sistema deve suportar o uso simultâneo por até 100 usuários sem degradação de desempenho
+RNF008: O sistema deve responder a interações do usuário em menos de 1 segundo
+RNF009: O processamento de imagens faciais deve ser concluído em menos de 15 segundos
+
+3.3 Segurança e Privacidade
+
+RNF010: O sistema deve cumprir integralmente a LGPD (Lei Geral de Proteção de Dados)
+RNF011: Os dados dos pacientes devem ser criptografados durante a transmissão e armazenamento
+RNF012: O acesso ao sistema deve ser controlado por autenticação multifatorial
+RNF013: O sistema deve manter registros detalhados de auditoria para todas as ações realizadas
+RNF014: O sistema deve implementar diferentes níveis de acesso de acordo com o perfil do usuário
+
+3.4 Confiabilidade e Disponibilidade
+
+RNF015: O sistema deve estar disponível 99,9% do tempo (uptime)
+RNF016: O sistema deve realizar backups automáticos dos dados a cada 24 horas
+RNF017: O sistema deve incluir mecanismos de recuperação em caso de falhas
+RNF018: O tempo médio entre falhas (MTBF) deve ser superior a 720 horas
+
+3.5 Manutenção e Suporte
+
+RNF019: O sistema deve permitir atualizações sem interrupção do serviço
+RNF020: O sistema deve incluir ferramentas para monitoramento de desempenho e diagnóstico
+RNF021: A documentação técnica e de usuário deve ser completa e atualizada
+
+4. Especificações Técnicas
+4.1 Arquitetura do Sistema
+
+Aplicação web com arquitetura em camadas
+Backend desenvolvido em Python utilizando frameworks como Flask ou Django
+Frontend responsivo desenvolvido com tecnologias web modernas (React, Angular ou Vue)
+Banco de dados relacional para armazenamento de dados estruturados
+Componente dedicado para processamento de imagens e análise por machine learning
+
+4.2 Modelo de Machine Learning
+
+Utilização de redes neurais convolucionais (CNN) para análise de imagens faciais
+Modelos de classificação baseados em árvores de decisão ou ensemble (Random Forest, XGBoost) para integração de dados clínicos
+Validação cruzada para garantir robustez do modelo
+Treinamento em conjunto de dados diversificado e representativo
+Capacidade de aprendizado incremental com novos dados validados
 
-#### 1.1. Propósito
+4.3 Integrações
 
-Este Documento de Requisitos do Produto (PRD) descreve os requisitos para um chatbot de triagem inicial para identificar possíveis sinais de síndrome de Down em crianças, utilizando a API do Google Gemini. A ferramenta visa auxiliar pais, cuidadores e profissionais da educação na identificação precoce de características associadas à síndrome de Down, direcionando para avaliação médica adequada.
+Integração com sistemas de prontuário eletrônico via HL7/FHIR
+API RESTful para comunicação com sistemas externos
+Compatibilidade com formatos padrão de imagens médicas (DICOM)
+Integração com laboratórios para importação direta de resultados de exames
+Suporte a Single Sign-On (SSO) para integração com sistemas institucionais de autenticação
 
-#### 1.2. Escopo
+4.4 Implantação
 
-Este PRD cobre as funcionalidades, especificações técnicas, fluxo de funcionamento, métricas de sucesso, limitações e considerações éticas do chatbot. Não inclui o desenvolvimento de testes genéticos ou diagnósticos médicos definitivos.
+Disponibilização como SaaS (Software as a Service) hospedado em nuvem
+Opção de implantação on-premises para instituições com requisitos específicos de segurança
+Containers Docker para facilitar implantação e escalabilidade
+Estratégia de CI/CD para atualizações contínuas e gerenciamento de versões
 
-#### 1.3. Público-Alvo
+5. Experiência do Usuário
+5.1 Fluxo de Trabalho Principal
 
-- Pais e cuidadores de crianças
-- Educadores e profissionais de creches/escolas
-- Profissionais de saúde em locais com recursos limitados (para triagem inicial)
-- Estudantes e pesquisadores da área da saúde
+Login e autenticação do profissional de saúde
+Seleção de paciente existente ou registro de novo paciente
+Coleta de dados clínicos e antropométricos
+Upload de imagens faciais do paciente
+Registro de resultados de exames laboratóriais (quando disponível)
+Processamento dos dados pelo sistema
+Apresentação dos resultados da triagem com escore de probabilidade
+Visualização de recomendações e próximos passos
+Geração e exportação de relatório
 
-#### 1.4. Importante
+5.2 Design da Interface
 
-**Este sistema NÃO fornece diagnóstico médico e não substitui a avaliação de profissionais de saúde. A síndrome de Down só pode ser confirmada através de testes genéticos.**
+Layout limpo e clínico, priorizando clareza e legibilidade
+Uso de código de cores para indicar níveis de probabilidade e prioridade
+Navegação simplificada e intuitiva
+Adaptação automática para diferentes tamanhos de tela
+Áreas de trabalho organizadas por funcionalidade (coleta de dados, análise, relatórios)
 
-### 2.  Visão Geral do Produto
+5.3 Acessibilidade
 
-#### 2.1. Descrição
+Conformidade com diretrizes WCAG 2.1 nível AA
+Suporte a tecnologias assistivas
+Testes com usuários de diferentes perfis e necessidades
 
-O chatbot de triagem de síndrome de Down é uma ferramenta de software que utiliza inteligência artificial para analisar respostas a um questionário e identificar a probabilidade de presença de sinais associados à síndrome de Down em crianças. Ele fornece recomendações personalizadas e recursos educacionais para orientar os usuários nos próximos passos.
+6. Métricas e Análise
+6.1 Métricas de Desempenho do Produto
 
-#### 2.2. Declaração de Posicionamento do Produto
+Sensibilidade e especificidade do modelo preditivo
+Valor preditivo positivo e negativo
+Acurácia global do sistema
+Tempo médio de processamento
+Taxa de falsos positivos e falsos negativos
 
-Para pais, cuidadores e educadores preocupados com o desenvolvimento de crianças, o Chatbot de Triagem de Síndrome de Down é uma ferramenta de triagem inicial acessível e informativa que auxilia na identificação precoce de possíveis sinais, diferentemente dos métodos tradicionais que podem ser demorados ou inacessíveis, fornecendo orientações e recursos para promover a avaliação médica adequada.
+6.2 Métricas de Uso
 
-#### 2.3. Necessidades do Usuário e Problemas a Serem Resolvidos
+Número de triagens realizadas
+Tempo médio para completar uma triagem
+Taxa de abandono durante o processo de entrada de dados
+Frequência de uso das diferentes funcionalidades
+Distribuição geográfica e institucional de uso
 
-- **Necessidade:** Acesso rápido e fácil a informações sobre síndrome de Down e triagem inicial.
-- **Problema:** Falta de conscientização sobre os sinais de alerta e atrasos na identificação precoce, levando a intervenções tardias.
+6.3 Feedback e Melhoria Contínua
 
-#### 2.4. Objetivos do Produto
+Coleta estruturada de feedback dos usuários
+Rastreamento de confirmação diagnóstica para casos triados
+Análise periódica de desempenho do modelo com dados reais
+Processo definido para retrainamento e atualização do modelo
 
-- Criar uma ferramenta acessível para triagem inicial de possíveis sinais da síndrome de Down
-- Aumentar a conscientização sobre os sinais de alerta e a importância do diagnóstico precoce
-- Fornecer orientações e recursos apropriados para pais e cuidadores
-- Promover o encaminhamento para avaliação médica adequada
+7. Cronograma e Marcos
+7.1 Fases de Desenvolvimento
 
-### 3.  Funcionalidades do Produto
+Fase 1: Desenvolvimento do modelo de machine learning (3 meses)
+Fase 2: Desenvolvimento da interface e backend (4 meses)
+Fase 3: Testes internos e validação de acurácia (2 meses)
+Fase 4: Piloto em ambiente clínico controlado (3 meses)
+Fase 5: Refinamento e ajustes (2 meses)
+Fase 6: Lançamento da versão 1.0 (1 mês)
 
-#### 3.1. Requisitos Funcionais
+7.2 Marcos Principais
 
-1.  **Questionário de Triagem:**
-    -   Apresentar um conjunto de perguntas claras e objetivas sobre características físicas e de desenvolvimento associadas à síndrome de Down.
-    -   Permitir que os usuários respondam às perguntas de forma interativa (e.g., seleção múltipla, sim/não).
-    -   Adaptar o questionário com base nas respostas fornecidas (se aplicável).
+Conclusão do modelo preditivo com acurácia mínima de 90%
+Finalização do protótipo funcional para testes
+Aprovação por comitê de ética para teste em ambiente clínico
+Validação de acurácia em conjunto de dados real
+Certificação técnica de segurança e privacidade
+Treinamento da equipe piloto
+Lançamento oficial
 
-2.  **Análise de Respostas:**
-    -   Processar as respostas do questionário utilizando o modelo de IA do Google Gemini.
-    -   Calcular a probabilidade de presença de sinais com base nas respostas.
-    -   Fornecer uma interpretação clara e concisa dos resultados da análise.
+8. Riscos e Mitigações
+8.1 Riscos Técnicos
 
-3.  **Recomendações Personalizadas:**
-    -   Gerar orientações específicas com base nos resultados da análise de respostas.
-    -   Incluir recomendações sobre os próximos passos a serem seguidos (e.g., consultar um médico especialista, realizar testes genéticos).
-    -   Fornecer informações sobre recursos de apoio e organizações relevantes.
+Risco: Desempenho insuficiente do modelo de IA
 
-4.  **Interface Amigável:**
-    -   Desenvolver uma interface de usuário intuitiva e acessível em diferentes dispositivos (desktops, tablets, smartphones).
-    -   Utilizar linguagem clara e simples para garantir a compreensão por parte de todos os usuários.
-    -   Garantir a acessibilidade para usuários com deficiência (e.g., contraste de cores, navegação por teclado).
+Mitigação: Validação rigorosa com conjuntos de dados diversos e revisão por especialistas
 
-5.  **Recursos Educacionais:**
-    -   Fornecer informações detalhadas e confiáveis sobre a síndrome de Down.
-    -   Incluir links para artigos científicos, diretrizes médicas e organizações de apoio.
-    -   Apresentar os recursos de forma organizada e fácil de navegar.
 
-#### 3.2. Requisitos Não Funcionais
+Risco: Dificuldades de integração com sistemas existentes
 
-1.  **Desempenho:**
-    -   O sistema deve responder às interações do usuário de forma rápida e eficiente.
-    -   O tempo de carregamento das páginas deve ser mínimo.
+Mitigação: Desenvolvimento de APIs flexíveis e testes antecipados de interoperabilidade
 
-2.  **Confiabilidade:**
-    -   O sistema deve estar disponível e funcional na maior parte do tempo.
-    -   Os resultados da análise devem ser precisos e consistentes.
 
-3.  **Usabilidade:**
-    -   A interface do usuário deve ser fácil de usar e navegar.
-    -   Os usuários devem ser capazes de completar as tarefas de forma eficiente.
+Risco: Problemas de desempenho em escala
 
-4.  **Segurança:**
-    -   Os dados do usuário devem ser protegidos e tratados com confidencialidade.
-    -   O sistema deve estar protegido contra acesso não autorizado.
+Mitigação: Testes de carga e arquitetura escalável desde o início
 
-5.  **Escalabilidade:**
-    -   O sistema deve ser capaz de lidar com um número crescente de usuários e dados.
 
-6.  **Manutenibilidade:**
-    -   O código do sistema deve ser bem organizado e fácil de entender.
-    -   As atualizações e correções de bugs devem ser fáceis de implementar.
 
-### 4.  Especificações Técnicas
+8.2 Riscos Clínicos
 
--   **Linguagem de Programação:** Python
--   **Modelo de IA:** Google Gemini 1.5 Pro
--   **Framework de Interface:** Streamlit
--   **Ambiente de Desenvolvimento:** Google Colab
--   **Controle de Versão:** GitHub
-
-### 5.  Fluxo de Funcionamento
-
-1.  O usuário acessa a aplicação via interface Streamlit.
-2.  O usuário fornece a API key do Google AI Studio (se necessário).
-3.  O usuário responde ao questionário de triagem.
-4.  O sistema processa as respostas utilizando o Google Gemini.
-5.  O sistema apresenta os resultados da análise e as recomendações personalizadas.
-6.  O sistema orienta o usuário para os próximos passos e avaliação profissional, fornecendo recursos educacionais e links relevantes.
-
-### 6.  Métricas de Sucesso
-
--   **Precisão da Triagem:**
-    -   Alta correlação entre triagem positiva e diagnóstico médico posterior (a ser quantificado com dados de testes).
-    -   Baixa taxa de falsos negativos e falsos positivos.
-
--   **Usabilidade:**
-    -   Alta taxa de conclusão do questionário pelos usuários.
-    -   Feedback positivo dos usuários sobre a facilidade de uso (coletado por meio de pesquisas e avaliações).
-    -   Baixo índice de erros de navegação.
-
--   **Impacto:**
-    -   Número de encaminhamentos médicos gerados pelo uso da ferramenta.
-    -   Aumento da conscientização sobre a síndrome de Down (medido por meio de pesquisas antes e depois do uso).
-    -   Redução do tempo entre a identificação dos sinais e a avaliação médica.
-
--   **Alcance:**
-    -   Quantidade de usuários que utilizam a ferramenta (número de acessos, usuários registrados, etc.).
-    -   Distribuição geográfica dos usuários.
-    -   Dados demográficos dos usuários.
-
-### 7.  Limitações e Considerações Éticas
-
--   **Não-Diagnóstico:**
-    -   Enfatizar claramente que a ferramenta não fornece diagnóstico médico e não substitui a avaliação de um profissional de saúde qualificado.
-    -   Incluir avisos e isenções de responsabilidade em locais estratégicos da aplicação.
-
--   **Privacidade:**
-    -   Garantir que os dados fornecidos pelos usuários sejam tratados com confidencialidade e em conformidade com as regulamentações de proteção de dados (e.g., GDPR, LGPD).
-    -   Implementar medidas de segurança para proteger os dados contra acesso não autorizado.
-    -   Informar claramente aos usuários sobre como seus dados serão coletados, usados e armazenados.
-
--   **Sensibilidade:**
-    -   Apresentar informações de maneira empática, respeitosa e não-alarmista.
-    -   Evitar linguagem que possa causar ansiedade ou medo nos usuários.
-    -   Fornecer apoio emocional e recursos de aconselhamento, se necessário.
-
--   **Acessibilidade:**
-    -   Garantir que a ferramenta seja acessível a usuários com diferentes habilidades e necessidades.
-    -   Implementar diretrizes de acessibilidade web (e.g., WCAG) para garantir que a aplicação seja utilizável por pessoas com deficiência.
-    -   Considerar a inclusão de recursos como leitor de tela, legendas e opções de contraste de cores.
-
-### 8.  Recursos Necessários
-
--   Conta no Google AI Studio
--   API key do Google Gemini
--   Conta no GitHub
--   Ambiente Google Colab (para desenvolvimento e testes)
--   Conhecimento básico de Python
--   Conhecimento de desenvolvimento web (para a interface Streamlit)
--   Dados de treinamento e validação (para o modelo de IA)
--   Recursos humanos (desenvolvedores, designers, especialistas em saúde)
-
-### 9.  Cronograma de Desenvolvimento
-
-1.  **Fase 1: Planejamento e Configuração (2 semanas)**
-    -   Definição detalhada dos requisitos e casos de uso.
-    -   Configuração do ambiente de desenvolvimento (Google Colab, GitHub).
-    -   Obtenção e preparação dos dados de treinamento e validação.
-
-2.  **Fase 2: Desenvolvimento do Modelo de IA e Chatbot (4 semanas)**
-    -   Desenvolvimento e treinamento do modelo de IA do Google Gemini.
-    -   Implementação da lógica do chatbot para análise de respostas e geração de recomendações.
-    -   Integração com a API do Google Gemini.
-
-3.  **Fase 3: Desenvolvimento da Interface do Usuário (3 semanas)**
-    -   Desenvolvimento da interface do usuário com Streamlit.
-    -   Implementação do questionário de triagem, apresentação de resultados e recursos educacionais.
-    -   Garantia da usabilidade e acessibilidade da interface.
-
-4.  **Fase 4: Testes e Refinamentos (2 semanas)**
-    -   Realização de testes unitários, testes de integração e testes de sistema.
-    -   Coleta de feedback dos usuários e realização de ajustes e melhorias.
-    -   Validação da precisão da triagem e do desempenho do sistema.
+Risco: Taxa elevada de falsos negativos
 
-5.  **Fase 5: Documentação e Publicação (1 semana)**
-    -   Criação da documentação do usuário e da documentação técnica.
-    -   Publicação do código no GitHub.
-    -   Preparação de materiais de divulgação e treinamento (se necessário).
+Mitigação: Otimização do modelo para alta sensibilidade, mesmo com custo de especificidade
 
-### 10. Futuras Melhorias
 
--   Inclusão de módulo de upload de fotos para análise de características faciais (com cautela ética e validação científica).
--   Tradução para múltiplos idiomas.
--   Versão offline para uso em áreas com conectividade limitada.
--   Expansão para outras condições genéticas (após validação e pesquisa).
--   Desenvolvimento de aplicativo móvel.
--   Integração com sistemas de registros médicos eletrônicos (com as devidas autorizações e segurança).
--   Personalização da experiência do usuário com base em perfis e preferências.
--   Aprimoramento do modelo de IA com dados adicionais e técnicas de aprendizado contínuo.
+Risco: Dependência excessiva da ferramenta por profissionais
 
-### 11. Como Utilizar
+Mitigação: Comunicação clara de que se trata de ferramenta de apoio, não de diagnóstico definitivo
 
-#### 11.1. Pré-requisitos
 
--   Python 3.7+
--   Conta no Google AI Studio
--   API key do Google Gemini
--   Navegador web moderno
+Risco: Variabilidade na qualidade de dados inseridos
 
-#### 11.2. Instalação (Para Desenvolvedores)
+Mitigação: Validação na entrada e guias claros para coleta padronizada
 
-1.  Clone este repositório:
 
-    ```bash
-    git clone [https://github.com/seu-usuario/triagem-sindrome-down.git](https://github.com/seu-usuario/triagem-sindrome-down.git)
-    cd triagem-sindrome-down
-    ```
 
-2.  Instale as dependências:
+8.3 Riscos Regulatórios
 
-    ```bash
-    pip install -r requirements.txt
-    ```
+Risco: Não conformidade com requisitos regulatórios
 
-3.  Configure sua API key:
-    -   Obtenha uma API key no [Google AI Studio](https://ai.google.dev/)
-    -   Adicione a chave no campo correspondente na interface (ou configure a variável de ambiente, se aplicável).
+Mitigação: Envolvimento precoce de especialistas em regulação e compliance
 
-4.  Execute a aplicação:
 
-    ```bash
-    streamlit run app.py
-    ```
+Risco: Questões de privacidade e proteção de dados
 
-#### 11.3. Instruções de Uso (Para Usuários Finais)
+Mitigação: Implementação de privacy by design e revisões periódicas de segurança
 
-1.  Acesse a aplicação web no endereço fornecido.
-2.  Leia atentamente as informações e avisos sobre o propósito e as limitações da ferramenta.
-3.  Responda ao questionário de triagem de forma precisa e completa.
-4.  Revise os resultados da análise e as recomendações fornecidas.
-5.  Siga as orientações sobre os próximos passos e consulte um profissional de saúde qualificado para avaliação e diagnóstico adequados.
-6.  Explore os recursos educacionais para obter mais informações sobre a síndrome de Down.
 
-### 12. Estrutura do Projeto
 
-triagem-sindrome-down/
-├── app.py                 # Aplicação principal com Streamlit
-├── chatbot.py             # Implementação do chatbot
-├── requirements.txt       # Dependências do projeto
-├── dados/                 # Dados e materiais de referência
-│   └── sinais_sd.json     # Características da síndrome de Down
-├── docs/                  # Documentação adicional
-│   └── referencias.md     # Referências científicas
-└── README.md              # Este arquivo (PRD resumido)
+9. Aprovações e Revisões
+9.1 Requisitos para Aprovação
 
-### 13. Base Científica
+Validação técnica do modelo preditivo
+Aprovação pelo comitê de ética médica
+Validação de usabilidade por grupo representativo de usuários finais
+Avaliação de conformidade com regulações aplicáveis
+Análise de custo-benefício
 
-O chatbot foi desenvolvido com base em literatura científica sobre características clínicas da síndrome de Down. As principais características avaliadas incluem:
+9.2 Processo de Revisão
 
--   Hipotonia muscular
--   Características faciais distintivas
--   Prega palmar única
--   Espaço aumentado entre o primeiro e segundo dedo do pé
--   Atrasos no desenvolvimento motor e de linguagem
+Revisões bimestrais dos requisitos durante o desenvolvimento
+Revisão completa após cada fase principal
+Feedback estruturado dos usuários durante piloto
+Revisão final antes do lançamento
 
-É crucial enfatizar que estas características são amplamente reconhecidas como sinais clínicos comuns da síndrome de Down, **embora o diagnóstico definitivo requeira análise cromossômica.**
+10. Anexos e Referências
+10.1 Glossário
 
-### 14. Notas Importantes
+Síndrome de Down: Condição genética causada pela presença de uma terceira cópia do cromossomo 21
+Triagem: Processo de identificação preliminar de indivíduos com maior probabilidade de apresentar uma condição
+Sensibilidade: Capacidade do teste de identificar corretamente indivíduos que têm a condição
+Especificidade: Capacidade do teste de identificar corretamente indivíduos que não têm a condição
+Machine Learning: Subcampo da inteligência artificial que utiliza algoritmos para aprender com dados e fazer previsões
 
--   Este projeto é destinado apenas para fins educacionais e de triagem inicial.
--   Não utilize esta ferramenta como substituto para avaliação médica profissional.
--   Os resultados devem ser interpretados com cautela e sempre confirmados por especialistas.
--   A triagem precoce pode contribuir para intervenções antecipadas, melhorando o prognóstico.
--   A precisão da ferramenta depende da qualidade dos dados de treinamento e da validação clínica.
--   O desenvolvimento e uso da ferramenta devem ser realizados de forma ética e responsável, considerando os impactos sociais e psicológicos.
+10.2 Referências e Literatura
 
-### 15. Licença
+[Diretrizes clínicas e protocolos para diagnóstico de Síndrome de Down]
+[Estudos epidemiológicos relevantes]
+[Padrões técnicos e regulatórios aplicáveis]
+[Literatura sobre aplicações de IA em genética clínica]
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo LICENSE para detalhes.
+10.3 Material Complementar
 
-### 16. Contribuições
+Protótipos iniciais de interface
+Modelo de dados
+Resultados preliminares de validação do algoritmo
+Especificações detalhadas de API
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias.
-
-### 17. Contato
+11. Contato
 
 Para questões ou sugestões, entre em contato através de [seu-email@exemplo.com].
 
